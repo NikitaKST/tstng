@@ -1,0 +1,19 @@
+{
+  "name": "tstng",
+  "version": "1.0.0",
+  "description": "[![Build status](https://ci.appveyor.com/api/projects/status/cb3s5v7jqhcukxft?svg=true)](https://ci.appveyor.com/project/NikitaKST/tstng)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/NikitaKST/tstng.git"
+  },
+  "author": "nikitakst",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikitaKST/tstng/issues"
+  },
+  "homepage": "https://github.com/NikitaKST/tstng#readme"
+}
