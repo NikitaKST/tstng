@@ -3,8 +3,9 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  devtool: 'source-map',
   output: {
-    path: path.resolve(__dirname, 'dist'), // Папка для сохранения выходных файлов
+    path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'images/[hash][ext][query]',
   },
   module: {
@@ -15,6 +16,16 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        test: /\.txt$/,
+        use: {
+          loader: 'raw-loader',
+        },
+      },
+      {
+        test: /\.svg$/,
+        type: 'asset/inline',
       },
       {
         test: /\.(png|jpg|gif)$/i,
@@ -36,7 +47,6 @@ module.exports = {
       },
     ],
   },
-  // Плагины
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/index.html',
@@ -47,5 +57,4 @@ module.exports = {
       chunkFilename: '[id].css',
     }),
   ],
-  // Другие настройки Webpack
 };
